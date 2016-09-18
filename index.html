@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VICTR</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 id="gameTitle">Game 1</h1>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-5">
+            <h2 id="team1">Team 1</h3>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+            <h2 id="team2">Team 2</h3>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-5">
+            <img id="pic1" src="img/ProfilePlaceholder.png" height="200" width="200" />
+        </div>
+        <div class="col-sm-2">
+            <h1 id="pos"><span class="glyphicon glyphicon-chevron-left"></span></h1>
+        </div>
+        <div class="col-sm-5">
+            <img id="pic2" src="img/ProfilePlaceholder.png" height="200" width="200" />
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-5">
+            <h1 id="score1">0</h1>
+        </div>
+        <div class="col-sm-2">
+            <h1>-</h1>
+        </div>
+        <div class="col-sm-5">
+            <h1 id="score2">0</h1>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+            <h2>Play to 11</h2>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="js/smoothscroll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function startup() {
+        if (Math.floor((Math.random() * 10) + 1) <= 5)
+            $("#pos").html('<span class="glyphicon glyphicon-chevron-right"></span>');
+    }
+
+    function refresh() {
+
+    }
+    startup();
+    var refresher = setInterval(refresh, 2000);
+</script>
+
+</html>
