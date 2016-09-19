@@ -1,0 +1,9 @@
+{
+    team1name: 'John Smith',
+    team2name: 'Matt Smith',
+    team1score: '0',
+    team2score: '0',
+    pos: "team1",
+    isFinished: "false",
+    winner: "none"
+}

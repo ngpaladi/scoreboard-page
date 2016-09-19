@@ -75,10 +75,12 @@
     }
 
     function refresh() {
+        $.getJSON("./gameState.php", function (data) {
 
+        })
     }
     startup();
-    var refresher = setInterval(refresh, 2000);
+    var refresher = setInterval(refresh, 1000);
 </script>
 
 </html>
