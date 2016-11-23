@@ -1,0 +1,10 @@
+{
+    "gameName": "Game",
+    "team1name": "Team One",
+    "team2name": "Team Two",
+    "team1score": "-1",
+    "team2score": "-1",
+    "pos": "1",
+    "isFinished": "0",
+    "winner": "0"
+}
