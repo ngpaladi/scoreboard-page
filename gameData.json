@@ -2,9 +2,9 @@
     "gameName": "Game",
     "team1name": "Team One",
     "team2name": "Team Two",
-    "team1score": "-1",
-    "team2score": "-1",
-    "pos": "1",
-    "isFinished": "0",
+    "team1score": "0",
+    "team2score": "0",
+    "pos": "0",
+    "isFinished": "-1",
     "winner": "0"
 }

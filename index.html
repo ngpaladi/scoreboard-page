@@ -89,26 +89,29 @@
         $.getJSON( /*"./gameState.php"*/ "./gameData.json", function (data) {
             console.log("query complete");
 
-            if (data.isFinished == '0') {
-                document.getElementById("gameTitle").innerHTML = data.gameName;
-                document.getElementById("team1").innerHTML = data.team1name;
-                document.getElementById("team2").innerHTML = data.team2name;
-                document.getElementById("score1").innerHTML = data.team1score;
-                document.getElementById("score2").innerHTML = data.team2score;
+            document.getElementById("gameTitle").innerHTML = data.gameName;
+            document.getElementById("team1").innerHTML = data.team1name;
+            document.getElementById("team2").innerHTML = data.team2name;
+            document.getElementById("score1").innerHTML = data.team1score;
+            document.getElementById("score2").innerHTML = data.team2score;
 
-                if (data.pos = "1") {
-                    document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-left"></span>';
-                } else if (data.pos = "2") {
-                    document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-right"></span>';
-                } else {
-                    document.getElementById("pos").innerHTML = "";
-                }
-
-                document.getElementById("pic1").src = "./img/team1.png";
-                document.getElementById("pic2").src = "./img/team2.png";
-
+            if (data.pos = "1") {
+                document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-left"></span>';
+            } else if (data.pos = "2") {
+                document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-right"></span>';
             } else {
+                document.getElementById("pos").innerHTML = "";
+            }
+
+            document.getElementById("pic1").src = "./img/team1.png";
+            document.getElementById("pic2").src = "./img/team2.png";
+
+            if (data.isFinished == '1') {
                 console.log("game complete");
+            } else if (data.isFinished == '-1') {
+                console.log("accepting registration");
+                document.getElementById("pic1").src = "img/ProfilePlaceholder.png";
+                document.getElementById("pic2").src = "img/ProfilePlaceholder.png";
             }
         });
     }
