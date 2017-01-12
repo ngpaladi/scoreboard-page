@@ -86,7 +86,7 @@
 
     function refresh() {
         console.log("refresh");
-        $.getJSON( /*"./gameState.php"*/ "./gameData.json", function (data) {
+        $.getJSON("./gameState.php" /*"./gameData.json"*/ , function (data) {
             console.log("query complete");
 
             document.getElementById("gameTitle").innerHTML = data.gameName;
