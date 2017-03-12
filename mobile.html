@@ -22,16 +22,19 @@
         </div>
         <div class="col-sm-2"></div>
         <div class="col-sm-5">
-            <h2 id="team2">Team 2</h3>
+            <h1 id="score1">0</h1>
+        </div>
+        
+    </div>
+    <div class="row">
+    <div class="col-sm-2">
+            <h1>-</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-5">
-            <h1 id="score1">0</h1>
-        </div>
-        <div class="col-sm-2">
-            <h1>-</h1>
-        </div>
+            <h2 id="team2">Team 2</h3>
+        </div>        
         <div class="col-sm-5">
             <h1 id="score2">0</h1>
         </div>
@@ -72,9 +75,9 @@
             document.getElementById("score2").innerHTML = data.team2score;
 
             if (data.pos = "1") {
-                document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-left"></span>';
+                document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-up"></span>';
             } else if (data.pos = "2") {
-                document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-right"></span>';
+                document.getElementById("pos").innerHTML = '<span class="glyphicon glyphicon-chevron-down"></span>';
             } else {
                 document.getElementById("pos").innerHTML = "";
             }
