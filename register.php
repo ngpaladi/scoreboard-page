@@ -4,15 +4,16 @@
 
     if($data["isFinished"]=="-1"){
         
-        $data["gameName"] = $_POST["gameName"];
-        $data["team1name"] = $_POST["team1name"];
-        $data["team2name"] = $_POST["team2name"];
+        $data["gameName"] = $_GET["gameName"];
+        $data["team1name"] = GET["team1name"];
+        $data["team2name"] = $_GET["team2name"];
         
         $data["pos"] = strval(rand(1,2));
+        $data["isFinished"]="0";
         
-        echo('Success! Please begin the game.');
+        file_put_contents("gameData.json", json_encode($data, JSON_PRETTY_PRINT));
     } else {
-        echo('Error! Game in progress or recently concluded. Please say "Victor, reset" to start a new one.');
+        
     }
 
 ?>
